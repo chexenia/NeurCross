@@ -1,0 +1,7 @@
+numpy==1.21.5
+scipy==1.7.3
+timm==0.6.13
+torch==1.13.1
+torch_kmeans==0.2.0
+torchinfo==1.8.0
+trimesh==4.5.3
