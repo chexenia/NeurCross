@@ -3,7 +3,7 @@
 ### [Project](https://qiujiedong.github.io/publications/NeurCross/) | [Paper](https://arxiv.org/pdf/2405.13745)
 
 **This repository is the official PyTorch implementation of our
-paper,  *NeurCross: A Neural Approach to Computing Cross Fields for Quad Mesh Generation*.**
+paper,  *NeurCross: A Neural Approach to Computing Cross Fields for Quad Mesh Generation*, ACM Transactions on Graphics (SIGGRAPH 2025).**
 
 <img src='./assets/NeurCross.jpg'>
 
