@@ -1,0 +1,12 @@
+[project]
+name = "NeurCross"
+description = "Neural cross field project"
+license = "AGPL-3.0"
+
+[project.dependencies]
+numpy = "*"
+scipy = "*"
+torch = "*"
+torchinfo = "*"
+timm = "*"
+trimesh = "*"
