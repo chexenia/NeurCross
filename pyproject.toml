@@ -17,7 +17,8 @@ dependencies = [
     "torch",
     "torchinfo",
     "timm",
-    "trimesh"
+    "trimesh",
+    "torch_kmeans"
 ]
 
 [tool.setuptools]
