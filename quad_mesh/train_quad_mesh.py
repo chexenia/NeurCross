@@ -1,7 +1,6 @@
 import os
 import sys
-
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+from tqdm import tqdm
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np
 import torch
@@ -26,6 +25,7 @@ os.makedirs(logdir, exist_ok=True)
 log_file = utils.setup_logdir_only_log(logdir, args)
 
 device = 'cpu' if not torch.cuda.is_available() else 'cuda'
+print('Using device:', device)
 
 # get data loaders
 utils.same_seed(args.seed)
@@ -74,7 +74,9 @@ criterion = MorseLoss(weights=args.loss_weights, loss_type=args.loss_type, div_d
 
 # For each epoch
 for epoch in range(args.num_epochs):
-    for batch_idx, data in enumerate(train_dataloader):
+
+
+    for batch_idx, data in enumerate(tqdm(train_dataloader, desc=f"Epoch {epoch+1}/{args.num_epochs}")):
         if batch_idx != 0 and (batch_idx % 500 == 0 or batch_idx == len(train_dataloader) - 1):
             SAVE_BEST = True
 
